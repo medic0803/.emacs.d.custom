@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d.custom/user-lisp")
-;; (require 'init-awesomeTab)
+(add-to-list 'load-path "./ohther-packages")
+;;(require 'init-awesomeTab)
 (require 'init-evil)
 (require 'init-blog)
 (require 'init-userOrg)
