@@ -60,7 +60,7 @@
            (insert (format "[[./imgs/%s]]" file))))
     ))
 ;; Drag-and-drop to `dired`
-(add-hook 'dired-mode-hook 'org-download-enable)
+;; (add-hook 'dired-mode-hook 'org-download-enable)
 
 ;; set the display width for org-mode images
 ;; (setq org-image-actual-width '(300))

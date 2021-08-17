@@ -110,13 +110,6 @@
   (setq-default evil-escape-key-sequence "jk")
   )
 
-;;-- cofig fctix
-(use-package fcitx
-  :init
-  (fcitx-aggressive-setup)
-  :ensure t
-  )
-
 ;; enable speed-command to optimize org GTD
 (use-package evil-org
   :init
@@ -133,4 +126,5 @@
   :init
   (global-evil-surround-mode 1))
 
+(require 'fcitx)
 (provide 'init-evil)
