@@ -71,19 +71,21 @@
 (use-package undo-tree
   :config
   (turn-on-undo-tree-mode))
-(setq-default undo-tree-mode 1)
-(define-key evil-normal-state-map (kbd "C-r") 'undo-tree-redo)
-(define-key evil-normal-state-map (kbd "u") 'undo-tree-undo)
+
+;; (setq-default undo-tree-mode 1)
 (use-package evil
   :ensure t
   :init
   (evil-mode 1)
+  (undo-tree-mode 1)
   :config
   (setcdr evil-insert-state-map nil)
   :bind(
         :map evil-normal-state-map
         ("C-e" . move-end-of-line)
         ("C-a" . move-beginning-of-line)
+        ;; ("C-r" . undo-tree-redo)
+        ;; ("u"   . undo-tree-undo)
 
         ("t" . org-todo)
         ("j" . evil-next-visual-line)
