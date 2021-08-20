@@ -7,4 +7,7 @@
 (require 'dap-lldb)
 (require 'dap-cpptools)
 
+;; php
+(require 'dap-php)
+
 (provide 'init-dev)
