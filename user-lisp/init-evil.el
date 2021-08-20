@@ -127,4 +127,5 @@
   (global-evil-surround-mode 1))
 
 (require 'fcitx)
+
 (provide 'init-evil)
