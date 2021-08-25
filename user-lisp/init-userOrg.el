@@ -118,5 +118,6 @@
 
 ;; keyboard auto change
 (require 'fcitx)
+;;(fcitx-aggressive-setup)
 
 (provide 'init-userOrg)
