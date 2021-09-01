@@ -126,6 +126,7 @@
   :init
   (global-evil-surround-mode 1))
 
+;;;; https://github.com/laishulu/emacs-smart-input-source
 (use-package sis
   ;; :hook
   ;; enable the /follow context/ and /inline region/ mode for specific buffers
@@ -142,7 +143,7 @@
 
    ;; Other language input source: "rime", "sogou" or another one.
    ;; "im.rime.inputmethod.Squirrel.Rime"
-   "com.apple.keylayout.pinyin.simplifed")
+   "com.apple.inputmethod.SCIM.ITABC")
 
   ;; enable the /cursor color/ mode
   (sis-global-cursor-color-mode t)
