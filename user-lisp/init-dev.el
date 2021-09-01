@@ -6,6 +6,7 @@
 ;; c/c++
 (require 'dap-lldb)
 (require 'dap-cpptools)
+(require 'dap-gdb-lldb)
 
 ;; php
 (require 'dap-php)

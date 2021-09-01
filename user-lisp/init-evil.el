@@ -119,7 +119,7 @@
   (start-process "org-icalendar-open-ics-file-process" nil "open" "-a" "/Applications/Calendar.app" file))
 
 (add-hook 'org-icalendar-after-save-hook 'org-icalendar-open-ics-file)
-(require 'dap-gdb-lldb)
+
 
 (use-package evil-surround
   :ensure t

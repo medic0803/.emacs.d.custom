@@ -14,3 +14,36 @@ cd ~/.emacs.d.custom
 ln ./custom.el ~/.emacs.d
 ln ./custom-post.el ~/.emacs.d/custom-post.el
 ```
+
+-------------------------------------------------------------------------------
+
+## Main Features ##
+### init-evil ###
+- evil
+- evil-escape
+- evil-leader
+- evil-org
+- evil-surround
+- sis (require OS-based input source manager)
+- undo-tree
+
+### init-blog ###
+- ox-hugo
+
+### init-dev ###
+- dap-python
+- dap-lldb
+- dap-gdb-lldb
+- dap-php
+
+### init-lazyCat ###
+- auto-save
+- awesome-tab
+- snails
+
+### init-userOrg ###
+- org-bullets
+- org-capture-templates
+- org-superstar
+- org-tempo
+- flyspell-mode

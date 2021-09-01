@@ -116,8 +116,4 @@
   :hook (org-mode . org-superstar-mode)
   :init (setq org-superstar-headline-bullets-list '("☰" "☷" "❀" "❦" "☯" "☭")))
 
-;; keyboard auto change
-(require 'fcitx)
-;;(fcitx-aggressive-setup)
-
 (provide 'init-userOrg)
