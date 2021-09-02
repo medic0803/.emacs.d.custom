@@ -128,12 +128,8 @@
 
 ;;;; https://github.com/laishulu/emacs-smart-input-source
 (use-package sis
-  ;; :hook
-  ;; enable the /follow context/ and /inline region/ mode for specific buffers
-  ;; (((text-mode prog-mode) . sis-context-mode)
-  ;;  ((text-mode prog-mode) . sis-inline-mode))
-
-  :config
+  :ensure t
+  :init
   ;; For MacOS
   (sis-ism-lazyman-config
 
@@ -143,10 +139,21 @@
 
    ;; Other language input source: "rime", "sogou" or another one.
    ;; "im.rime.inputmethod.Squirrel.Rime"
-   "com.apple.inputmethod.SCIM.ITABC")
+   "com.apple.inputmethod.SCIM.ITABC"
+   ;; "com.sogou.inputmethod.sogou.pinyin"
 
+   ;; Please preapre system-based input source manager(ISM)
+   ;; MacOS: macism/emacsmacport(for EMP); MS Windows: im-select; Linux: fcitx/ibus
+   "macism")
+
+  ;; :hook
+  ;; enable the /follow context/ and /inline region/ mode for specific buffers
+  ;; (((text-mode prog-mode) . sis-context-mode)
+  ;;  ((text-mode prog-mode) . sis-inline-mode))
+
+  :config
   ;; enable the /cursor color/ mode
-  (sis-global-cursor-color-mode t)
+  ;; (sis-global-cursor-color-mode t)
   ;; enable the /respect/ mode
   (sis-global-respect-mode t)
   ;; enable the /context/ mode for all buffers
