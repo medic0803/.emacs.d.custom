@@ -10,9 +10,9 @@
 mv ~/.emacs.d ~/.emacs.d.bak
 git clone --depth 1 https://github.com/seagle0128/.emacs.d.git ~/.emacs.d
 git clone --depth 1 https://github.com/medic0803/.emacs.d.custom.git ~/.emacs.d.custom
-cd ~/.emacs.d.custom
-ln ./custom.el ~/.emacs.d
-ln ./custom-post.el ~/.emacs.d/custom-post.el
+cd ~/.emacs.d
+ln -s ~/.emacs.d.custom/custom.el custom.el
+ln -s ~/.emacs.d.custom/custom-post.el custom-post.el
 ```
 
 -------------------------------------------------------------------------------
