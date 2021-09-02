@@ -97,13 +97,17 @@
 
 ;;font
 ;; Setting English Font
-(set-face-attribute
- 'default nil :font "SF Mono 13")
-;; Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset
-                    (font-spec :family "STSong" :size 13)))
+(if (string= system-type "darwin")
+    (
+     (set-face-attribute
+      'default nil :font "SF Mono 13")
+     ;; Chinese Font
+     (dolist (charset '(kana han symbol cjk-misc bopomofo))
+       (set-fontset-font (frame-parameter nil 'font)
+                         charset
+                         (font-spec :family "STSong" :size 13)))
+
+     ))
 
 ;; diable company
 (add-hook 'org-mode-hook (lambda () (company-mode -1)))
