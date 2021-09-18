@@ -15,5 +15,4 @@
 ;;   (define-advice isearch-repeat-backward (:after (_))
 ;;     (setq-local my/isearch--direction 'backward))
 ;;   )
-
 (provide 'init-builtin)
