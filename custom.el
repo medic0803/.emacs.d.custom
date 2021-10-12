@@ -68,7 +68,7 @@
  '(centaur-full-name "Medic")
  '(centaur-logo "/Users/anthony/.emacs.d/logo-classic.png")
  '(centaur-mail-address "medicwrf@gmail.com")
- '(centaur-package-archives 'ustc)
+ '(centaur-package-archives 'melpa)
  '(centaur-theme 'light)
  '(doom-modeline-minor-modes t)
  '(doom-modeline-mu4e nil)
