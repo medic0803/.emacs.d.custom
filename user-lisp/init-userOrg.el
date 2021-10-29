@@ -42,23 +42,24 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;; config org-download ;;;;;;;;;;;;;;;;;;;;;
 ;; (require 'org-download)
 ;; paste image for clipboard
-(defun insert-image-from-clipboard ()
-  "保存剪切板图片为 Y-m-d-H-M-S.png，插入 Markdown/Org 图片链接."
-  (interactive)
-  (progn
-    (setq file (format-time-string"%Y-%m-%d-%H-%M-%S.jpg"))
-    (cond ((derived-mode-p 'markdown-mode)
-           (unless (file-exists-p (file-name-directory "imgs/"))
-             (make-directory (file-name-directory "imgs/")))
-           (call-process-shell-command (format "pngpaste imgs/%s" file))
-           (insert (format "![](%s)" file)))
+;; (defun insert-image-from-clipboard ()
+;;   "保存剪切板图片为 Y-m-d-H-M-S.png，插入 Markdown/Org 图片链接."
+;;   (interactive)
+;;   (progn
+;;     (setq file (format-time-string"%Y-%m-%d-%H-%M-%S.jpg"))
+;;     (cond ((derived-mode-p 'markdown-mode)
+;;            (unless (file-exists-p (file-name-directory "imgs/"))
+;;              (make-directory (file-name-directory "imgs/")))
+;;            (call-process-shell-command (format "pngpaste imgs/%s" file))
+;;            (insert (format "![](%s)" file)))
 
-          ((derived-mode-p 'org-mode)
-           (unless (file-exists-p (file-name-directory "imgs/"))
-             (make-directory (file-name-directory "imgs/")))
-           (call-process-shell-command (format "pngpaste imgs/%s" file))
-           (insert (format "[[./imgs/%s]]" file))))
-    ))
+;;           ((derived-mode-p 'org-mode)
+;;            (unless (file-exists-p (file-name-directory "imgs/"))
+;;              (make-directory (file-name-directory "imgs/")))
+;;            (call-process-shell-command (format "pngpaste imgs/%s" file))
+;;            (insert (format "[[./imgs/%s]]" file))))
+;;     ))
+
 ;; Drag-and-drop to `dired`
 ;; (add-hook 'dired-mode-hook 'org-download-enable)
 
@@ -118,5 +119,19 @@
   :if (and (display-graphic-p) (char-displayable-p ?*))
   :hook (org-mode . org-superstar-mode)
   :init (setq org-superstar-headline-bullets-list '("☰" "☷" "❀" "❦" "☯" "☭")))
+
+
+;; org-download
+(require 'org-download)
+
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+
+(use-package iscroll
+  :hook
+  (org-mode . iscroll-mode)
+  :config
+  (evil-define-key '(normal visual) 'global-map (kbd "j") 'iscroll-next-line)
+  (evil-define-key '(normal visual) 'global-map (kbd "k") 'iscroll-previous-line))
 
 (provide 'init-userOrg)

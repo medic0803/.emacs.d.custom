@@ -77,10 +77,13 @@
  '(evil-leader/leader "SPC")
  '(org-default-notes-file "~/OrgNotes")
  '(org-directory "~/OrgNotes")
+ '(org-download-image-latex-width 200)
+ '(org-download-image-org-width 200)
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-with-author t)
  '(org-refile-targets nil)
- '(org-reverse-note-order t))
+ '(org-reverse-note-order t)
+ '(selection-coding-system 'utf-8))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

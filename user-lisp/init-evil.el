@@ -1,6 +1,8 @@
 (eval-when-compile
   (require 'init-custom))
 
+(require 'reveal-in-osx-finder)
+
 ;; Evil
 (use-package evil-leader
   :ensure t
@@ -43,10 +45,10 @@
     "qq" 'save-buffers-kill-emacs
     "qr" 'reload-init-file
 
+    "sc" 'org-download-clipboard
     "se" 'iedit-mode
     "ss" 'org-download-screenshot ;;screnshot
     "st" 'org-toggle-inline-images
-    "sp" 'insert-image-from-clipboard
     ;; snails
     ;; "ss" 'snails
     ;; "sp" 'snails-search-point
