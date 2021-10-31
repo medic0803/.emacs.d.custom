@@ -1,7 +1,10 @@
 (eval-when-compile
   (require 'init-custom))
 
-(require 'reveal-in-osx-finder)
+(use-package reveal-in-osx-finder
+  :ensure t
+  )
+;; (require 'reveal-in-osx-finder)
 
 ;; Evil
 (use-package evil-leader
@@ -87,6 +90,8 @@
         :map evil-normal-state-map
         ("C-e" . move-end-of-line)
         ("C-a" . move-beginning-of-line)
+        ("C-n" . next-line)
+        ("C-p" . previous-line)
         ;; ("C-r" . undo-tree-redo)
         ;; ("u"   . undo-tree-undo)
 
@@ -100,6 +105,8 @@
         :map evil-visual-state-map
         ("C-e" . move-end-of-line)
         ("C-a" . move-beginning-of-line)
+        ("C-n" . next-line)
+        ("C-p" . previous-line)
         ("j" . evil-next-visual-line)
         ("k" . evil-previous-visual-line)
         )
