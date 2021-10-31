@@ -9,6 +9,7 @@
 
 ;; Prettify UI
 (use-package org-bullets
+  :ensure t
   :if (char-displayable-p ?⚫)
   :hook (org-mode . org-bullets-mode)
   :init
@@ -122,12 +123,19 @@
 
 
 ;; org-download
-(require 'org-download)
+(use-package org-download
+  :ensure t
+  :hook
+  (dired-mode-hook . org-download-enable)
+  )
 
-;; Drag-and-drop to `dired`
-(add-hook 'dired-mode-hook 'org-download-enable)
+;; (require 'org-download)
+
+;; ;; Drag-and-drop to `dired`
+;; (add-hook 'dired-mode-hook 'org-download-enable)
 
 (use-package iscroll
+  :ensure t
   :hook
   (org-mode . iscroll-mode)
   :config

@@ -71,6 +71,7 @@
   )
 ;; to enable C-r for redo
 (use-package undo-tree
+  :ensure t
   :config
   (turn-on-undo-tree-mode))
 
@@ -114,6 +115,7 @@
 
 ;; enable speed-command to optimize org GTD
 (use-package evil-org
+  :ensure t
   :init
   (setq evil-org-key-theme '(textobjects navigation additional insert todo))
   )
