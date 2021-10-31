@@ -72,6 +72,12 @@
     "SPC"'counsel-M-x
     )
   )
+
+;;u for undo-fu
+(use-package undo-fu
+  :ensure t
+  )
+
 ;; to enable C-r for redo
 (use-package undo-tree
   :ensure t
