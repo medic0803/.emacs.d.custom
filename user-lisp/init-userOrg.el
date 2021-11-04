@@ -125,6 +125,9 @@
 ;; org-download
 (use-package org-download
   :ensure t
+  :init
+  (require 'org-download)
+  :config
   :hook
   (dired-mode-hook . org-download-enable)
   )
