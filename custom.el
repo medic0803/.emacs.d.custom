@@ -117,7 +117,8 @@
  '(lsp-headerline-breadcrumb-symbols-hint-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-info-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-warning-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#986801"))))
- '(lsp-ui-doc-background ((t (:background "#23272e"))))
+ ;; if set theme to light, uncommit this code to change lsp ui doc
+ ;; '(lsp-ui-doc-background ((t (:background "#23272e"))))
  '(lsp-ui-sideline-code-action ((t (:inherit warning))))
  '(macrostep-expansion-highlight-face ((t (:background "#23272e" :extend t))))
  '(org-ellipsis ((t (:foreground nil))))
