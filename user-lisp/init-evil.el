@@ -43,6 +43,8 @@
     "la" 'langtool-autoshow-detail-popup
 
     "oc" 'arthurMao/screenCapture
+    "on" 'org-next-visible-heading
+    "op" 'org-previous-visible-heading
     "oo" 'occur
 
     "qq" 'save-buffers-kill-emacs

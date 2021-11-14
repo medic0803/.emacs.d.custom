@@ -16,6 +16,6 @@
 ;;     (setq-local my/isearch--direction 'backward))
 ;;   )
 
-(custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
+;; (custom-set-faces (if (not window-system) '(default ((t (:background "nil"))))))
 ;; (set-face-background 'default "undefined")
 (provide 'init-builtin)
