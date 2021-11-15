@@ -101,7 +101,7 @@
 ;; Setting English Font
 (if (string= system-type "darwin")
     (progn
-      (set-face-attribute 'default nil :font "SF Mono 13")
+      ;; (set-face-attribute 'default nil :font "SF Mono 13")
       ;; Chinese Font
       (dolist (charset '(kana han symbol cjk-misc bopomofo))
         (set-fontset-font (frame-parameter nil 'font)
@@ -145,4 +145,5 @@
   (evil-define-key '(normal visual) 'global-map (kbd "j") 'iscroll-next-line)
   (evil-define-key '(normal visual) 'global-map (kbd "k") 'iscroll-previous-line))
 
+(setq yas-snippet-dirs "~/.emacs.d.custom/snippets")
 (provide 'init-userOrg)
