@@ -145,5 +145,5 @@
   (evil-define-key '(normal visual) 'global-map (kbd "j") 'iscroll-next-line)
   (evil-define-key '(normal visual) 'global-map (kbd "k") 'iscroll-previous-line))
 
-(setq yas-snippet-dirs "~/.emacs.d.custom/snippets")
+;;(setq yas-snippet-dirs "~/.emacs.d.custom/snippets")
 (provide 'init-userOrg)
