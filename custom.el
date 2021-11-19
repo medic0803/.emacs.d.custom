@@ -71,11 +71,14 @@
  '(centaur-org-directory "~/OrgNotes/")
  '(centaur-package-archives 'melpa)
  '(centaur-theme 'default)
+ '(dap-python-executable "python3")
  '(doom-modeline-minor-modes t)
  '(doom-modeline-mu4e nil)
  '(doom-modeline-unicode-fallback t)
  '(evil-leader/in-all-states nil)
  '(evil-leader/leader "SPC")
+ '(lsp-beancount-python-interpreter nil)
+ '(lsp-pyright-python-executable-cmd "python3")
  '(org-default-notes-file "~/Documents/OrgNotes")
  '(org-directory "~/Documents/OrgNotes")
  '(org-download-image-html-width 400)
@@ -85,6 +88,8 @@
  '(org-export-with-author nil)
  '(org-refile-targets nil)
  '(org-reverse-note-order t)
+ '(python-shell-exec-path "/opt/homebrew/bin/python3.9")
+ '(python-shell-interpreter "/opt/homebrew/bin/python3.9")
  '(selection-coding-system 'utf-8))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -117,8 +122,8 @@
  '(lsp-headerline-breadcrumb-symbols-hint-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-info-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-warning-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#986801"))))
- ;; if set theme to light, uncommit this code to change lsp ui doc
- ;; '(lsp-ui-doc-background ((t (:background "#23272e"))))
+;; if set theme to light, uncommit this code to change lsp ui doc
+;; '(lsp-ui-doc-background ((t (:background "#23272e"))))
  '(lsp-ui-sideline-code-action ((t (:inherit warning))))
  '(macrostep-expansion-highlight-face ((t (:background "#23272e" :extend t))))
  '(org-ellipsis ((t (:foreground nil))))

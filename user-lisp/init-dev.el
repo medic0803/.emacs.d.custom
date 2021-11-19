@@ -1,14 +1,16 @@
 ;; python
 
-(setq-default python-shell-interpreter "/Users/anthony/opt/anaconda3/bin/python3")
 (require' dap-python)
 
-;; require npm, use your system's package manager to install it
-(use-package lsp-pyright
-  :ensure t
-  :hook (python-mode . (lambda ()
-                         (require 'lsp-pyright)
-                         (lsp))))  ; or lsp-deferred
+
+(if (string= system-type "darwin")
+    (progn
+      (setq python-shell-interpreter "/opt/homebrew/bin/python3.9")
+      (setq-default python-shell-interpreter "/opt/homebrew/bin/python3.9")
+      (setq lsp-beancount-python-interpreter "/opt/homebrew/bin/python3.9")
+      (setq lsp-pyright-python-executable-cmd "/opt/homebrew/bin/python3.9")
+      ))
+
 ;; c/c++
 (require 'dap-lldb)
 (require 'dap-cpptools)
