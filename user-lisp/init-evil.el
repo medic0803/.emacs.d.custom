@@ -25,8 +25,8 @@
     ;; org-capture
     "cc"  'org-capture
     "ds" 'org-schedule
-    "dd" 'org-deadline
-
+    ;; "dd" 'org-deadline
+    "dd" 'delete-trailing-whitespace
     "ff" 'find-file "fr" 'counsel-recentf
     "fR" 'rename-this-file
     "FF"  'reveal-in-osx-finder

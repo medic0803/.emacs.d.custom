@@ -146,4 +146,11 @@
   (evil-define-key '(normal visual) 'global-map (kbd "k") 'iscroll-previous-line))
 
 ;;(setq yas-snippet-dirs "~/.emacs.d.custom/snippets")
+
+(use-package super-save
+  :ensure t
+  :config
+  (super-save-mode +1)
+  (setq super-save-auto-save-when-idle t)
+  )
 (provide 'init-userOrg)

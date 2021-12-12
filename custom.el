@@ -64,12 +64,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(before-save-hook '(font-lock-flush))
  '(centaur-dashboard t)
  '(centaur-full-name "Medic")
  '(centaur-logo "~/.emacs.d/logo-classic.png")
  '(centaur-mail-address "medicwrf@gmail.com")
  '(centaur-org-directory "~/OrgNotes/")
  '(centaur-package-archives 'melpa)
+ '(centaur-prettify-symbols-alist nil)
  '(centaur-theme 'default)
  '(dap-python-executable "python3")
  '(doom-modeline-minor-modes t)
@@ -77,8 +79,8 @@
  '(doom-modeline-unicode-fallback t)
  '(evil-leader/in-all-states nil)
  '(evil-leader/leader "SPC")
- '(lsp-beancount-python-interpreter nil)
- '(lsp-pyright-python-executable-cmd "python3")
+ '(lsp-beancount-python-interpreter nil t)
+ '(lsp-pyright-python-executable-cmd "python3" t)
  '(org-default-notes-file "~/Documents/OrgNotes")
  '(org-directory "~/Documents/OrgNotes")
  '(org-download-image-html-width 400)
@@ -122,8 +124,6 @@
  '(lsp-headerline-breadcrumb-symbols-hint-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-info-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#50a14f"))))
  '(lsp-headerline-breadcrumb-symbols-warning-face ((t :inherit lsp-headerline-breadcrumb-symbols-face :underline (:style wave :color "#986801"))))
-;; if set theme to light, uncommit this code to change lsp ui doc
-;; '(lsp-ui-doc-background ((t (:background "#23272e"))))
  '(lsp-ui-sideline-code-action ((t (:inherit warning))))
  '(macrostep-expansion-highlight-face ((t (:background "#23272e" :extend t))))
  '(org-ellipsis ((t (:foreground nil))))
