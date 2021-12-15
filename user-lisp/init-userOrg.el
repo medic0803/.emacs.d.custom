@@ -149,6 +149,8 @@
 
 (use-package super-save
   :ensure t
+  :init
+  (require 'super-save)
   :config
   (super-save-mode +1)
   (setq super-save-auto-save-when-idle t)

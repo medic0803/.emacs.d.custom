@@ -65,6 +65,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(before-save-hook '(font-lock-flush))
+ '(centaur-auto-themes '(("8:00" . doom-one-light) ("19:00" . doom-one)))
  '(centaur-dashboard t)
  '(centaur-full-name "Medic")
  '(centaur-logo "~/.emacs.d/logo-classic.png")
@@ -79,7 +80,7 @@
  '(doom-modeline-unicode-fallback t)
  '(evil-leader/in-all-states nil)
  '(evil-leader/leader "SPC")
- '(lsp-beancount-python-interpreter nil t)
+ '(lsp-beancount-python-interpreter nil)
  '(lsp-pyright-python-executable-cmd "python3" t)
  '(org-default-notes-file "~/Documents/OrgNotes")
  '(org-directory "~/Documents/OrgNotes")
