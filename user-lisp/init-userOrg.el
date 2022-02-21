@@ -128,6 +128,7 @@
   :init
   (require 'org-download)
   :config
+  (setq-default org-download-image-dir "~/Documents/OrgNotes/OrgImages")
   :hook
   (dired-mode-hook . org-download-enable)
   )

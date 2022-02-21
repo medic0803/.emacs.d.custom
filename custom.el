@@ -84,6 +84,7 @@
  '(lsp-pyright-python-executable-cmd "python3" t)
  '(org-default-notes-file "~/Documents/OrgNotes")
  '(org-directory "~/Documents/OrgNotes")
+ '(org-download-image-dir "~/Documents/OrgNotes/OrgImages")
  '(org-download-image-html-width 400)
  '(org-download-image-latex-width 400)
  '(org-download-image-org-width 400)

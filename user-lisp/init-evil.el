@@ -23,7 +23,8 @@
     "bb" 'switch-to-buffer
 
     ;; org-capture
-    "cc"  'org-capture
+    "cc" 'org-capture
+    "co" 'counsel-outline
     "ds" 'org-schedule
     ;; "dd" 'org-deadline
     "dd" 'delete-trailing-whitespace
