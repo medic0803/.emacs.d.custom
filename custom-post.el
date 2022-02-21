@@ -11,4 +11,5 @@
 (require 'init-lazyCat)
 ;; (require 'init-dap)
 (require 'init-async)
+(require 'init-helm)
 (require 'init-dev)

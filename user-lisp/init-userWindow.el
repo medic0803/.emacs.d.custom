@@ -17,7 +17,14 @@
 (global-set-key (kbd "S-<return>") #'moon/return-cancel-completion)
 
 
-
+(use-package imenu-list
+  :ensure t
+  :init
+  (imenu-list-minor-mode)
+  :config
+  (set-default 'org-imenu-depth 5)
+  ;; (add-hook 'dired-mode-hook 'imenu-list)
+  )
 
 ;; make minibuffer float in center
 ;;(require 'ivy-posframe)

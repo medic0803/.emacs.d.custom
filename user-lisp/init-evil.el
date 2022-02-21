@@ -16,6 +16,7 @@
 
   ;; evil-leader-mode should be enabled before evil-mode
   (evil-leader/set-key
+    ;; helm
     "a" 'helm-ag
     "A" 'helm-do-ag
 
@@ -24,7 +25,7 @@
 
     ;; org-capture
     "cc" 'org-capture
-    "co" 'counsel-outline
+    ;; "co" 'counsel-outline
     "ds" 'org-schedule
     ;; "dd" 'org-deadline
     "dd" 'delete-trailing-whitespace
@@ -43,6 +44,8 @@
     "ld" 'langtool-check-done
     "la" 'langtool-autoshow-detail-popup
 
+    ;; imenu
+    "ml" 'imenu-list-smart-toggle
     "oc" 'arthurMao/screenCapture
     "on" 'org-next-visible-heading
     "op" 'org-previous-visible-heading
