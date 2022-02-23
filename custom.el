@@ -84,7 +84,7 @@
  '(imenu-list-auto-update t)
  '(imenu-list-idle-update-delay 1)
  '(imenu-list-position 'left)
- '(imenu-list-size 0.2)
+ '(imenu-list-size 0.3)
  '(lsp-beancount-python-interpreter nil)
  '(lsp-pyright-python-executable-cmd "python3" t)
  '(org-default-notes-file "~/Documents/OrgNotes")

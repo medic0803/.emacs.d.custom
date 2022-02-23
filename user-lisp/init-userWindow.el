@@ -20,7 +20,7 @@
 (use-package imenu-list
   :ensure t
   :init
-  (imenu-list-minor-mode)
+  ;; (imenu-list-minor-mode)
   :config
   (set-default 'org-imenu-depth 5)
   ;; (add-hook 'dired-mode-hook 'imenu-list)

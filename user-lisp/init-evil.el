@@ -51,6 +51,10 @@
     "op" 'org-previous-visible-heading
     "oo" 'occur
 
+    ;; python
+    "ps" 'run-python
+    "pr" 'python-shell-send-buffer
+
     "qq" 'save-buffers-kill-emacs
     "qr" 'reload-init-file
 
