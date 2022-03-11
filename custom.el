@@ -65,7 +65,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(before-save-hook '(font-lock-flush))
- '(centaur-auto-themes '(("8:00" . doom-one-light) ("19:00" . doom-one)))
+ '(centaur-auto-themes '(("8:00" . doom-one-light) ("20:00" . doom-one)))
  '(centaur-dashboard t)
  '(centaur-full-name "Medic")
  '(centaur-logo "~/.emacs.d/logo-classic.png")
@@ -73,7 +73,7 @@
  '(centaur-org-directory "~/OrgNotes/")
  '(centaur-package-archives 'melpa)
  '(centaur-prettify-symbols-alist nil)
- '(centaur-theme 'default)
+ '(centaur-theme 'auto)
  '(dap-python-executable "python3")
  '(doom-modeline-minor-modes t)
  '(doom-modeline-mu4e nil)
@@ -98,8 +98,6 @@
  '(org-imenu-depth 5)
  '(org-refile-targets nil)
  '(org-reverse-note-order t)
- '(python-shell-exec-path "/opt/homebrew/bin/python3.9")
- '(python-shell-interpreter "/opt/homebrew/bin/python3.9")
  '(selection-coding-system 'utf-8))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

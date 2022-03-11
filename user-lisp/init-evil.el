@@ -25,10 +25,16 @@
 
     ;; org-capture
     "cc" 'org-capture
+
     ;; "co" 'counsel-outline
     "ds" 'org-schedule
     ;; "dd" 'org-deadline
     "dd" 'delete-trailing-whitespace
+
+    ;; edit-source
+    ;; "ea" 'org-edit-src-abort
+    "ee" 'org-edit-src-code
+    ;; "ee" 'org-edit-src-exit
     "ff" 'find-file "fr" 'counsel-recentf
     "fR" 'rename-this-file
     "FF"  'reveal-in-osx-finder
@@ -65,7 +71,7 @@
     ;; snails
     ;; "ss" 'snails
     ;; "sp" 'snails-search-point
-    "S" 'snails
+    "S" 'shell-pop
 
     ;; window
     "w/" 'split-window-right
@@ -189,4 +195,6 @@
   (sis-global-inline-mode t)
   )
 
+;; (global-set-key (kbd "C-c C-c") 'org-edit-src-exit)
+;; (global-set-key (kbd "C-c C-k") 'org-edit-src-abort)
 (provide 'init-evil)

@@ -156,4 +156,7 @@
   (super-save-mode +1)
   (setq super-save-auto-save-when-idle t)
   )
+
+;; org-modern
+;; (add-hook 'org-mode-hook #'org-modern-mode)
 (provide 'init-userOrg)
