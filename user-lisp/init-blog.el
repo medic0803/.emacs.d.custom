@@ -35,4 +35,10 @@
       (insert (format "[[%s%s]]" prefix imagename))
     (insert (format "![%s](%s%s)" imagename prefix imagename))))
 
+;; http://0x100.club/wiki_emacs/mac-org-mode-output-pdf.html
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2021/bin/universal-darwin/"))
+(setq exec-path (append exec-path '("/usr/local/texlive/2021/bin/universal-darwin/")))
+
+(setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+
 (provide 'init-blog)
