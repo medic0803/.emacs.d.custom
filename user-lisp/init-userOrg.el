@@ -1,4 +1,4 @@
-;; set org-mode word-wrap
+;; ;; set org-mode word-wrap
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;; org-mode code block
@@ -31,62 +31,23 @@
          :empty-lines 1)
         )
       )
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 (setq-default flyspell-mode t)
-;; (anki-editor-mode 1)
-;; (setq anki-editor-create-decks t)
 
 ;;display inline imagesautomatically
 (setq org-startup-with-inline-images t)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;; config org-download ;;;;;;;;;;;;;;;;;;;;;
-;; (require 'org-download)
-;; paste image for clipboard
-;; (defun insert-image-from-clipboard ()
-;;   "保存剪切板图片为 Y-m-d-H-M-S.png，插入 Markdown/Org 图片链接."
-;;   (interactive)
-;;   (progn
-;;     (setq file (format-time-string"%Y-%m-%d-%H-%M-%S.jpg"))
-;;     (cond ((derived-mode-p 'markdown-mode)
-;;            (unless (file-exists-p (file-name-directory "imgs/"))
-;;              (make-directory (file-name-directory "imgs/")))
-;;            (call-process-shell-command (format "pngpaste imgs/%s" file))
-;;            (insert (format "![](%s)" file)))
 
-;;           ((derived-mode-p 'org-mode)
-;;            (unless (file-exists-p (file-name-directory "imgs/"))
-;;              (make-directory (file-name-directory "imgs/")))
-;;            (call-process-shell-command (format "pngpaste imgs/%s" file))
-;;            (insert (format "[[./imgs/%s]]" file))))
-;;     ))
-
-;; Drag-and-drop to `dired`
-;; (add-hook 'dired-mode-hook 'org-download-enable)
-
-;; set the display width for org-mode images
-;; (setq org-image-actual-width '(300))
-
-;; config org-agenda
-(setq org-agenda-files '("~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
-
-
-;; language tools configuration
-;; (setq langtool-language-tool-jar "~/.languagetool/languagetool-commandline.jar")
-;; (require 'langtool)
-
-
-(defun langtool-autoshow-detail-popup (overlays)
-  (when (require 'popup nil t)
-    ;; Do not interrupt current popup
-    (unless (or popup-instances
-                ;; suppress popup after type `C-g` .
-                (memq last-command '(keyboard-quit)))
-      (let ((msg (langtool-details-error-message overlays)))
-        (popup-tip msg)))))
-(setq langtool-autoshow-message-function
-      'langtool-autoshow-detail-popup)
-
+;; (defun langtool-autoshow-detail-popup (overlays)
+;;   (when (require 'popup nil t)
+;;     ;; Do not interrupt current popup
+;;     (unless (or popup-instances
+;;                 ;; suppress popup after type `C-g` .
+;;                 (memq last-command '(keyboard-quit)))
+;;       (let ((msg (langtool-details-error-message overlays)))
+;;         (popup-tip msg)))))
+;; (setq langtool-autoshow-message-function
+;;       'langtool-autoshow-detail-popup)
 
 ;;Config undo-fu
 (global-undo-tree-mode -1)
@@ -112,7 +73,7 @@
 
 ;; diable company
 (add-hook 'org-mode-hook (lambda () (company-mode -1)))
-;; (setq company-global-modes '(not org-mode))
+(setq company-global-modes '(not org-mode))
 
 ;; customise org-superstart-bullets-list
 ;; https://en.wikipedia.org/wiki/Dingbat#Unicode
@@ -133,21 +94,6 @@
   (dired-mode-hook . org-download-enable)
   )
 
-;; (require 'org-download)
-
-;; ;; Drag-and-drop to `dired`
-;; (add-hook 'dired-mode-hook 'org-download-enable)
-
-(use-package iscroll
-  :ensure t
-  :hook
-  (org-mode . iscroll-mode)
-  :config
-  (evil-define-key '(normal visual) 'global-map (kbd "j") 'iscroll-next-line)
-  (evil-define-key '(normal visual) 'global-map (kbd "k") 'iscroll-previous-line))
-
-;;(setq yas-snippet-dirs "~/.emacs.d.custom/snippets")
-
 (use-package super-save
   :ensure t
   :init
@@ -155,8 +101,10 @@
   :config
   (super-save-mode +1)
   (setq super-save-auto-save-when-idle t)
+  (setq auto-save-default nil)
+  (setq super-save-exclude '(".gpg"))
   )
 
-;; org-modern
-;; (add-hook 'org-mode-hook #'org-modern-mode)
+(require 'aggressive-indent)
+(add-hook 'org-mode-hook #'aggressive-indent-mode)
 (provide 'init-userOrg)

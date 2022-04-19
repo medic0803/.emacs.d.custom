@@ -18,6 +18,9 @@
 ;;   (require 'auto-save)
 ;;   :config
 ;;   (auto-save-enable)
+;;   ;; (setq auto-save-silent t)   ; quietly save
+;;   ;; (setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
+
 ;; ;;; custom predicates if you don't want auto save.
 ;; ;;; disable auto save mode when current filetype is an gpg file.
 ;;   (setq auto-save-disable-predicates
@@ -27,12 +30,12 @@
 ;;              (file-name-extension (buffer-name)) t))))
 ;;   )
 
-;; (remove-hook 'before-save-hook 'delete-trailing-whitespace t)
-;; (remove-hook 'before-save-hook 'aggressive-indent--process-changed-list-and-indent t)
+(remove-hook 'before-save-hook 'delete-trailing-whitespace t)
+(remove-hook 'before-save-hook 'aggressive-indent--process-changed-list-and-indent t)
 
-;; (setq delete-trailing-lines nil)
-;; (add-hook 'before-save-hook (lambda () (aggressive-indent-mode nil)))
-;; (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace nil)))
+(setq delete-trailing-lines nil)
+(add-hook 'before-save-hook (lambda () (aggressive-indent-mode nil)))
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace nil)))
 
 (use-package awesome-tab
   :load-path "~/.emacs.d.custom/other-packages/awesome-tab"

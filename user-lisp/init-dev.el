@@ -35,7 +35,7 @@
       ;; (python-shell-interpreter "/opt/homebrew/bin/python3.9")
       ;; (setq lsp-python-ms-extra-paths "~/opt/anaconda3/bin/python")
       (setq lsp-python-ms-python-executable-cmd "~/opt/anaconda3/bin/python")
-      (setq lsp-python-ms-extra-paths "~/opt/anaconda3/pkgs")
+      ;; (setq lsp-python-ms-extra-paths "~/opt/anaconda3/pkgs")
       ;; (setq lsp-beancount-python-interpreter "/opt/homebrew/bin/python3.9")
       ;;       (setq lsp-beancount-python-interpreter "python3")
       ;;       (setq lsp-pyright-python-executable-cmd "/opt/homebrew/bin/python3.9")
@@ -59,4 +59,8 @@
 ;; php
 (require 'dap-php)
 
+;; jupyter notebook
+(require 'jupyter)
+
+(set-default 'Info-hide-note-references nil)
 (provide 'init-dev)
