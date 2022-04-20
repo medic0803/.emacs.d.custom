@@ -72,7 +72,7 @@
       ))
 
 ;; diable company
-(add-hook 'org-mode-hook (lambda () (company-mode -1)))
+;; (add-hook 'org-mode-hook (lambda () (company-mode -1)))
 (setq company-global-modes '(not org-mode))
 
 ;; customise org-superstart-bullets-list
@@ -107,4 +107,5 @@
 
 (require 'aggressive-indent)
 (add-hook 'org-mode-hook #'aggressive-indent-mode)
+
 (provide 'init-userOrg)

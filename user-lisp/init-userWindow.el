@@ -26,6 +26,33 @@
   ;; (add-hook 'dired-mode-hook 'imenu-list)
   )
 
+;;centaur-tabs
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+
+  ;; Selected tab bar
+  (setq centaur-tabs-style "wave")
+  (setq centaur-tabs-set-icons t)
+
+  ;; Selected tab bar
+  (setq centaur-tabs-set-bar 'under)
+  ;; Note: If you're not using Spacmeacs, in order for the underline to display
+  ;; correctly you must add the following line:
+  (setq x-underline-at-descent-line t)
+
+  ;;Customize the close button
+  ;; (setq centaur-tabs-close-button "X")
+
+  ;; Customize the modified marker
+  (setq centaur-tabs-set-modified-marker t)
+  (setq centaur-tabs-modified-marker "*")
+  :bind
+  ("s-," . centaur-tabs-backward-group)
+  ("s-." . centaur-tabs-forward-group)
+  ("s-j" . centaur-tabs-backward)
+  ("s-k" . centaur-tabs-forward))
 ;; make minibuffer float in center
 ;;(require 'ivy-posframe)
 ;; display at `ivy-posframe-style'

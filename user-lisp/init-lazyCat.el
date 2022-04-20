@@ -37,30 +37,30 @@
 (add-hook 'before-save-hook (lambda () (aggressive-indent-mode nil)))
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace nil)))
 
-(use-package awesome-tab
-  :load-path "~/.emacs.d.custom/other-packages/awesome-tab"
-  :init
-  (require 'awesome-tab)
-  :config
-  (awesome-tab-mode t)
-  :bind(
-        ;; ("Q". awesome-fast-switch/body)
-        ("s-1" . awesome-tab-select-beg-tab)
-        ("s-2" . awesome-tab-select-visible-tab)
-        ("s-3" . awesome-tab-select-visible-tab)
-        ("s-4" . awesome-tab-select-visible-tab)
-        ("s-5" . awesome-tab-select-visible-tab)
-        ("s-6" . awesome-tab-select-visible-tab)
-        ("s-7" . awesome-tab-select-visible-tab)
-        ("s-8" . awesome-tab-select-visible-tab)
-        ("s-9" . awesome-tab-select-end-tab)
-        ("s-j" . awesome-tab-backward-tab)
-        ("s-k" . awesome-tab-forward-tab)
-        ("s-," . awesome-tab-forward-group)
-        ("s-." . awesome-tab-backward-group)
-        ("s-w" . kill-current-buffer)
-        )
-  )
+;; (use-package awesome-tab
+;;   :load-path "~/.emacs.d.custom/other-packages/awesome-tab"
+;;   :init
+;;   (require 'awesome-tab)
+;;   :config
+;;   (awesome-tab-mode t)
+;;   :bind(
+;;         ;; ("Q". awesome-fast-switch/body)
+;;         ("s-1" . awesome-tab-select-beg-tab)
+;;         ("s-2" . awesome-tab-select-visible-tab)
+;;         ("s-3" . awesome-tab-select-visible-tab)
+;;         ("s-4" . awesome-tab-select-visible-tab)
+;;         ("s-5" . awesome-tab-select-visible-tab)
+;;         ("s-6" . awesome-tab-select-visible-tab)
+;;         ("s-7" . awesome-tab-select-visible-tab)
+;;         ("s-8" . awesome-tab-select-visible-tab)
+;;         ("s-9" . awesome-tab-select-end-tab)
+;;         ("s-j" . awesome-tab-backward-tab)
+;;         ("s-k" . awesome-tab-forward-tab)
+;;         ("s-," . awesome-tab-forward-group)
+;;         ("s-." . awesome-tab-backward-group)
+;;         ("s-w" . kill-current-buffer)
+;;         )
+;;   )
 
 ;;;;
 ;;(add-to-list 'load-path (expand-file-name "~/.emacs.d.custom/other-packages/cache-path-from-shell"))
