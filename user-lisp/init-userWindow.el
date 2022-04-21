@@ -33,7 +33,7 @@
   (centaur-tabs-mode t)
 
   ;; Selected tab bar
-  (setq centaur-tabs-style "wave")
+  (setq centaur-tabs-style "zigzag")
   (setq centaur-tabs-set-icons t)
 
   ;; Selected tab bar
@@ -48,7 +48,11 @@
   ;; Customize the modified marker
   (setq centaur-tabs-set-modified-marker t)
   (setq centaur-tabs-modified-marker "*")
+
+  ;; Tab cycling
+  (setq centaur-tabs-cycle-scope 'tabs)
   :bind
+  ("s-w" . centaur-tabs--kill-this-buffer-dont-ask)
   ("s-," . centaur-tabs-backward-group)
   ("s-." . centaur-tabs-forward-group)
   ("s-j" . centaur-tabs-backward)

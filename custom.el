@@ -85,6 +85,7 @@
  '(imenu-list-idle-update-delay 1)
  '(imenu-list-position 'left)
  '(imenu-list-size 0.3)
+ '(ispell-extra-args '("--sug-mode=ultra" "--lang=en_GB" "--run-together"))
  '(lsp-beancount-python-interpreter nil)
  '(lsp-pyright-python-executable-cmd "python3" t)
  '(org-default-notes-file "~/Documents/OrgNotes")
@@ -96,10 +97,11 @@
  '(org-download-screenshot-method "screencapture -i %s")
  '(org-export-with-author nil)
  '(org-imenu-depth 5)
+ '(org-indent-mode-turns-off-org-adapt-indentation t)
+ '(org-indent-mode-turns-on-hiding-stars t)
  '(org-refile-targets nil)
  '(org-reverse-note-order t)
- '(selection-coding-system 'utf-8)
- )
+ '(selection-coding-system 'utf-8))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

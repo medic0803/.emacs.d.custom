@@ -23,7 +23,7 @@
                          (lsp))))  ; or lsp-deferred
 
 (setq python-shell-interpreter "python3")
-
+(setq-default python-indent-offset 4)
 (if (string= system-type "darwin")
     (progn
       (setq python-shell-interpreter "~/opt/anaconda3/bin/python")

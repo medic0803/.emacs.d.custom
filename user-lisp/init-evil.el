@@ -104,8 +104,8 @@
   :init
   (evil-mode 1)
   (undo-tree-mode 1)
+  (setq evil-want-C-i-jump nil)
   :config
-  (setcdr evil-insert-state-map nil)
   :bind(
         :map evil-normal-state-map
         ("C-e" . move-end-of-line)
@@ -122,16 +122,22 @@
 
         :map evil-insert-state-map
         ([escape] . evil-normal-state)
+        ("C-e" . move-end-of-line)
+        ("C-a" . move-beginning-of-line)
+        ("C-n" . next-line)
+        ("C-p" . previous-line)
+        ("C-k" . kill-line)
+        ("C-d" . delete-forward-char)
         :map evil-visual-state-map
         ("C-e" . move-end-of-line)
         ("C-a" . move-beginning-of-line)
         ("C-n" . next-line)
         ("C-p" . previous-line)
         ("j" . evil-next-visual-line)
-        ("k" . evil-previous-visual-line)
-        )
+        ("k" . evil-previous-visual-line))
   )
 
+(evil-define-key 'normal org-mode-map (kbd "<tab>") #'org-cycle)
 (use-package evil-escape
   :ensure t
   :init
@@ -196,7 +202,5 @@
 ;; (global-set-key (kbd "C-c C-c") 'org-edit-src-exit)
 ;; (global-set-key (kbd "C-c C-k") 'org-edit-src-abort)
 
-;; change language based on different mode of evil
-;; (require 'fcitx)
-;; (fcitx-aggressive-setup)
+
 (provide 'init-evil)

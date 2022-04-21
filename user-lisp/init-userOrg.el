@@ -8,15 +8,15 @@
 (setq org-image-actual-width nil)
 
 ;; Prettify UI
-(use-package org-bullets
-  :ensure t
-  :if (char-displayable-p ?⚫)
-  :hook (org-mode . org-bullets-mode)
-  :init
-  (setq org-todo-keyword-faces '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
-                                 ("HAND" . (:foreground "white" :background "#2E8B57"  :weight bold))
-                                 ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
-  )
+;; (use-package org-bullets
+;;   :ensure t
+;;   :if (char-displayable-p ?⚫)
+;;   :hook (org-mode . org-bullets-mode)
+;;   :init
+(setq org-todo-keyword-faces '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
+                               ("HAND" . (:foreground "white" :background "#2E8B57"  :weight bold))
+                               ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
+;;   )
 
 ;; make notes capture faster
 (setq org-capture-templates
@@ -60,16 +60,16 @@
 
 ;;font
 ;; Setting English Font
-(if (string= system-type "darwin")
-    (progn
-      ;; (set-face-attribute 'default nil :font "SF Mono 13")
-      ;; Chinese Font
-      (dolist (charset '(kana han symbol cjk-misc bopomofo))
-        (set-fontset-font (frame-parameter nil 'font)
-                          charset
-                          (font-spec :family "STSong" :size 13)))
+;; (if (string= system-type "darwin")
+;;     (progn
+;;       ;; (set-face-attribute 'default nil :font "SF Mono 13")
+;;       ;; Chinese Font
+;;       (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;         (set-fontset-font (frame-parameter nil 'font)
+;;                           charset
+;;                           (font-spec :family "STSong" :size 13)))
 
-      ))
+;;       ))
 
 ;; diable company
 ;; (add-hook 'org-mode-hook (lambda () (company-mode -1)))
@@ -105,7 +105,19 @@
   (setq super-save-exclude '(".gpg"))
   )
 
-(require 'aggressive-indent)
-(add-hook 'org-mode-hook #'aggressive-indent-mode)
+;; (require 'aggressive-indent)
+;; (add-hook 'org-mode-hook #'aggressive-indent-mode)
 
+;; ;; try to fix bugs
+;; (setq-default org-indent-indentation-per-level 2)
+;; (add-hook 'org-mode-hook #'valign-mode) ;; use magic to beat the magic
+
+;; set src block indent
+(setq org-edit-src-content-indentation nil)
+
+;; (setq-default org-adapt-indentation nil)
+;; (setq-default adaptive-fill-mode nil)
+
+;; change dictionary
+(setq-default ispell-local-dictionary "en_GB")
 (provide 'init-userOrg)

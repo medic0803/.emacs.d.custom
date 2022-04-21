@@ -5,12 +5,12 @@
 
 
 ;; third-party packages may have to use require in :init
-(use-package snails
-  :load-path "~/.emacs.d.custom/other-packages/snails"
-  :init
-  (require 'snails)
-  (add-hook 'snails-mode-hook (lambda () (evil-insert-state)))
-  )
+;; (use-package snails
+;;   :load-path "~/.emacs.d.custom/other-packages/snails"
+;;   :init
+;;   (require 'snails)
+;;   (add-hook 'snails-mode-hook (lambda () (evil-insert-state)))
+;;   )
 
 ;; (use-package auto-save
 ;;   :load-path "~/.emacs.d.custom/other-packages/auto-save"
@@ -30,14 +30,14 @@
 ;;              (file-name-extension (buffer-name)) t))))
 ;;   )
 
-(remove-hook 'before-save-hook 'delete-trailing-whitespace t)
-(remove-hook 'before-save-hook 'aggressive-indent--process-changed-list-and-indent t)
+;; (remove-hook 'before-save-hook 'delete-trailing-whitespace t)
+;; (remove-hook 'before-save-hook 'aggressive-indent--process-changed-list-and-indent t)
 
-(setq delete-trailing-lines nil)
-(add-hook 'before-save-hook (lambda () (aggressive-indent-mode nil)))
-(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace nil)))
+;; (setq delete-trailing-lines nil)
+;; (add-hook 'before-save-hook (lambda () (aggressive-indent-mode nil)))
+;; (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace nil)))
 
-;; (use-package awesome-tab
+;; ;; (use-package awesome-tab
 ;;   :load-path "~/.emacs.d.custom/other-packages/awesome-tab"
 ;;   :init
 ;;   (require 'awesome-tab)
